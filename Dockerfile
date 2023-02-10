@@ -11,6 +11,7 @@ ENV SERVICE_HOME ${SERVICE_HOME:-/home/${SERVICE_USER}}
 RUN \
   adduser -h ${SERVICE_HOME} -s /sbin/nologin -u 1000 -D ${SERVICE_USER} && \
   apk add --no-cache \
+    bash \
     dumb-init \
     openssl \
     openjdk16-jre-headless \
